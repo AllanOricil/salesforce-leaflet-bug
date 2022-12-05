@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__AppPage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig
+      targets="lightning__RecordPage,lightning__HomePage,lightning__AppPage"
+    >
+            <property
+        label="Access Token"
+        name="accessToken"
+        type="String"
+        default="{!$Label.mapboxAccessToken}"
+        description="Mapbox Public Access Token"
+      />
+            <property
+        label="Latitude"
+        name="latitude"
+        type="String"
+        default="51.505"
+      />
+            <property
+        label="Longitude"
+        name="longitude"
+        type="String"
+        default="-0.09"
+      />
+            <property
+        label="Zoom"
+        name="zoom"
+        type="Integer"
+        min="0"
+        max="23"
+        default="13"
+      />
+            <property
+        label="Max Zoom"
+        name="maxZoom"
+        type="Integer"
+        min="0"
+        max="23"
+        default="18"
+      />
+            <property
+        label="Height"
+        name="height"
+        type="String"
+        default="500px"
+        description="Adjust this value to change the Height. If you clean this value, it defaults to  100%."
+      />
+            <property
+        label="Width"
+        name="width"
+        type="String"
+        default="500px"
+        description="Adjust this value to change the Width. If you clean this value, it defaults to 100%."
+      />
+            <property
+        label="Styles"
+        name="styles"
+        type="String"
+        description="Customize inline styles for the Map container."
+      />
+            <supportedFormFactors>
+                <supportedFormFactor type="Large" />
+                <supportedFormFactor type="Small" />
+            </supportedFormFactors>
+        </targetConfig>
+        <targetConfig targets="lightningCommunity__Default">
+            <property
+        label="Access Token"
+        name="accessToken"
+        type="String"
+        default="{!$Label.mapboxAccessToken}"
+        description="Mapbox Public Access Token"
+      />
+            <property
+        label="Latitude"
+        name="latitude"
+        type="String"
+        default="51.505"
+      />
+            <property
+        label="Longitude"
+        name="longitude"
+        type="String"
+        default="-0.09"
+      />
+            <property
+        label="Zoom"
+        name="zoom"
+        type="Integer"
+        min="0"
+        max="23"
+        default="13"
+      />
+            <property
+        label="Max Zoom"
+        name="maxZoom"
+        type="Integer"
+        min="0"
+        max="23"
+        default="18"
+      />
+            <property
+        label="Height"
+        name="height"
+        type="String"
+        default="500px"
+        description="Adjust this value to change the Height. If you clean this value, it defaults to  100%."
+      />
+            <property
+        label="Width"
+        name="width"
+        type="String"
+        default="500px"
+        description="Adjust this value to change the Width. If you clean this value, it defaults to 100%."
+      />
+            <property
+        label="Styles"
+        name="styles"
+        type="String"
+        description="Customize inline styles for the Map container."
+      />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

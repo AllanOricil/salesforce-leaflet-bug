@@ -1,0 +1,11 @@
+<template>
+  <lightning-card title="Map">
+    <c-leaflet-map
+      height={mapHeight}
+      width={mapWidth}
+      access-token={accessToken}
+      onleafletloaded={onLeafletLoaded}
+      styles={mapStyles}
+    ></c-leaflet-map>
+  </lightning-card>
+</template>
