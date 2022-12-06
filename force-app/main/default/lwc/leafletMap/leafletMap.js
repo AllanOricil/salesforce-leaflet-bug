@@ -43,7 +43,7 @@ export default class LeafletMap extends LightningElement {
     ])
       .then(() => {
         //2nd load plugins
-        loadScript(this, Leaflet + "/plugins/circle-sector.js")
+        loadScript(this, Leaflet + "/plugins/Semicircle.js")
           .then(() => {
             const mapElm = this.template.querySelector(".leaflet-container");
             this._map = L.map(mapElm, {
