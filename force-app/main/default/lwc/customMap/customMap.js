@@ -118,7 +118,7 @@ export default class EmergencyLocationMap extends LightningElement {
     marker.addTo(this.markersGroup);
 
     if (width > 0 && beamStyle.radius > 0) {
-      const beam = L.semiCircle(location, {
+      const beam = L.circle(location, {
         color: beamStyle.color,
         fillColor: beamStyle.fillColor || beamStyle.color,
         fillOpacity: beamStyle.fillOpacity || 0.4,

@@ -42,22 +42,12 @@ export default class LeafletMap extends LightningElement {
       loadStyle(this, Leaflet + "/leaflet.css")
     ])
       .then(() => {
-        //2nd load plugins
-        loadScript(this, Leaflet + "/plugins/Semicircle.js")
-          .then(() => {
-            const mapElm = this.template.querySelector(".leaflet-container");
-            this._map = L.map(mapElm, {
-              attributionControl: false
-            }).setView([this.latitude, this.longitude], this.zoom);
-            this.setupMapbox();
-            this.dispatchEvent(new CustomEvent("leafletloaded"));
-          })
-          .catch((error) => {
-            console.error(
-              "Error loading leaftlet circle selector plugin",
-              error?.message
-            );
-          });
+        const mapElm = this.template.querySelector(".leaflet-container");
+        this._map = L.map(mapElm, {
+          attributionControl: false
+        }).setView([this.latitude, this.longitude], this.zoom);
+        this.setupMapbox();
+        this.dispatchEvent(new CustomEvent("leafletloaded"));
       })
       .catch((error) => {
         console.error("Error loading leaflet", error?.message);
