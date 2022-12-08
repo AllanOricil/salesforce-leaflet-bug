@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>mapboxAccessToken</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Mapbox Access Token</shortDescription>
+        <value>REPLACE_WITH_YOUR_MAPBOX_API_KEY</value>
+    </labels>
+</CustomLabels>
